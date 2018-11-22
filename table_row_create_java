@@ -1,0 +1,45 @@
+ void fillTable(){
+        TableRow row;
+        TextView t1,t2,t3,t4,t5;
+        Context context=getContext();
+        for (int rowLoop = 0; rowLoop < dummydata.length; rowLoop++) {
+
+                row = new TableRow(getContext());
+
+                t1 = new TextView(getContext());
+                t2 = new TextView(getContext());
+                t3 = new TextView(getContext());
+                t4 = new TextView(getContext());
+                t5 = new TextView(getContext());
+
+                t1.setTextColor(ContextCompat.getColor(context,R.color.colorBlack));
+                t2.setTextColor(ContextCompat.getColor(context,R.color.colorBlack));
+                t3.setTextColor(ContextCompat.getColor(context,R.color.colorBlack));
+                t4.setTextColor(ContextCompat.getColor(context,R.color.colorBlack));
+                t5.setTextColor(ContextCompat.getColor(context,R.color.colorBlack));
+
+                t1.setText(dummydata[rowLoop][0]);
+                t2.setText(dummydata[rowLoop][1]);
+                t3.setText(dummydata[rowLoop][2]);
+                t4.setText(dummydata[rowLoop][3]);
+                t5.setText(dummydata[rowLoop][4]);
+
+                row.addView(t1);
+                row.addView(t2);
+                row.addView(t3);
+                row.addView(t4);
+                row.addView(t5);
+                row.setPadding(16,0,8,0);
+
+                tableLayout.addView(row, new TableLayout.LayoutParams(
+                        TableLayout.LayoutParams.WRAP_CONTENT,
+                        TableLayout.LayoutParams.WRAP_CONTENT));
+
+            if((rowLoop%2)!=0)
+            {
+                row.setBackgroundColor(Color.parseColor("#e2e2e2"));
+            }
+       }
+
+
+    }
