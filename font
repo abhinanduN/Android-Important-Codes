@@ -1,0 +1,10 @@
+Add font in the theme specified in the styles
+
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/ToolbarTheme</item>
+        <item name="android:fontFamily">@font/raleway_medium</item> 
+    </style>
